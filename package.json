@@ -1,0 +1,37 @@
+{
+  "name": "vpn-panel-cloudflare",
+  "version": "1.0.0",
+  "description": "🌐 پنل مدیریت VPN برای Cloudflare Workers با D1 Database",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler publish",
+    "test": "node --test tests/**/*.test.js",
+    "db:init": "wrangler d1 execute vpn-panel-db --file src/schema.sql",
+    "db:query": "wrangler d1 execute vpn-panel-db"
+  },
+  "dependencies": {
+    "itty-router": "^4.1.2",
+    "nanoid": "^5.0.4",
+    "crypto": "^1.0.1"
+  },
+  "devDependencies": {
+    "wrangler": "^3.50.0",
+    "@cloudflare/workers-types": "^4.20231218.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "vpn",
+    "cloudflare",
+    "workers",
+    "d1",
+    "database",
+    "panel",
+    "management"
+  ],
+  "author": "MrCpUGG",
+  "license": "MIT"
+}
